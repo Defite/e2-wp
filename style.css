@@ -124,6 +124,7 @@ p {
 }
 ul, ol {
 	margin: 0 0 1.5em 3em;
+	font-size:15px;
 }
 ul {
 	list-style: disc;
@@ -404,7 +405,7 @@ h2.site-description {
 	display:inline-block;
 }
 
-.entry-title a, .entry-title {
+.entry-title a, .entry-title, h4 {
 	font-size:18px;
 	font-weight:bold;
 	color:#000;
