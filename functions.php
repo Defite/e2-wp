@@ -69,7 +69,9 @@ function e2_setup() {
 	/**
 	 * Add support for the Aside Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', ) );
+	add_theme_support( 'post-formats', array( 'aside', 
+	//'image', 'link', 'audio', 'video' 
+	) );
 }
 endif; // e2_setup
 add_action( 'after_setup_theme', 'e2_setup' );

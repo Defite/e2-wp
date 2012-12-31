@@ -109,6 +109,7 @@ textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
+	margin:0 0 20px 0;
 }
 hr {
 	background-color: #ccc;
@@ -326,6 +327,7 @@ h1.page-title {
 h2.site-description {
 	font-weight:normal;
 	font-size:13px;
+	margin:-20px 0 0 0;
 }
 
 
@@ -435,6 +437,7 @@ h2.site-description {
 	    font-size: 11px;
 	    letter-spacing: 0.12em;
 	    text-transform: uppercase;
+	    margin:-20px 0 0 0;
 	}
 
 .byline {
@@ -889,3 +892,9 @@ p.form-submit {
 	#submit:active  {
 	  border:1px dashed #D0D060;
 	}
+
+/* Staff */
+
+.entry-content .width500 {
+	width:500px;
+}
