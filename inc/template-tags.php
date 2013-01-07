@@ -85,7 +85,8 @@ function e2_comment( $comment, $args, $depth ) {
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
 					<div class="vcard-meta">
-       					<?php printf( __( '%s', 'e2' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+       					<?php printf( __( '%s', 'e2' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author() ) ); ?>
+					<?php if ($comment->comment_author_email == get_the_author_email()) { echo '<span class="highlight">автор</span>'; } ?>
 					<div class="entry-meta">
 					<time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php

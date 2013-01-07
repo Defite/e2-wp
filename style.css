@@ -721,6 +721,20 @@ footer {
 	.footer-block {
 		float:left;
 	}
+		
+		a.login {
+			background:url(../e2/img/login.png) no-repeat 0 0;
+			width:16px;
+			height:16px;
+			display:inline-block;
+			text-indent:-9999em;
+			margin:0 10px 0 0;
+			opacity:0.5;
+		}
+		
+		a.login:hover {
+			opacity:1;
+		}
 	
 	.copyrights, .engine-info {
 		width:39%;
