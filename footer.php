@@ -18,7 +18,7 @@
 			<div class="footer-block copyrights">
 				<?php
 					if ( !is_user_logged_in() ) { ?>
-						<a class="login" href="<?php echo wp_login_url(); ?>">Вход</a>
+						<a id="login" class="login" href="#<?php //echo wp_login_url(); ?>">Вход</a>
 				<?php } ?>		
 				&copy; 2012 Джеффри "Чувак" Лебовски
 			</div>
@@ -35,6 +35,6 @@
 
 
 <?php wp_footer(); ?>
-
+<script src="<?php echo get_template_directory_uri(); ?>/js/login.js" type="text/javascript"></script>
 </body>
 </html>

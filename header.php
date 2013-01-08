@@ -23,6 +23,16 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="login-popup">
+	<?php 
+	$args = array(
+        'label_username' => NULL,
+        'label_password' => __( 'Password' ),
+        'label_remember' => __( 'Remember Me' ),
+        'value_username' => 'lebowski',
+        'value_remember' => false ); 
+	wp_login_form($args); ?>
+</div>
 
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">

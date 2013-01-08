@@ -912,3 +912,60 @@ p.form-submit {
 .entry-content .width500 {
 	width:500px;
 }
+
+/* Login form */
+
+#login-popup {
+	position:fixed;
+	top:0;
+	left:50%;
+	width:185px;
+	padding:20px;
+	margin:0 0 0 -112.5px;
+	font-size:13px;
+	background: #fff;
+	border-left:1px solid #92A2AD;
+	border-right:1px solid #92A2AD;
+	border-bottom:1px solid #92A2AD;
+	-webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    -webkit-box-shadow:  0px 2px 5px 0px rgba(0, 0, 0, 0.2);        
+    box-shadow:  0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+	display:none;
+}
+
+	#login-popup label {
+		font-size:13px;
+	}
+
+	#wp-submit {
+		padding:4px 10px;
+		font-size:13px;
+	}
+	
+	#login-popup p {
+		margin:0 0 5px 0;
+	}
+	
+		.login-password label {
+			background:url(../e2/img/lock.gif) no-repeat 0 0;
+			width:24px;
+			height:24px;
+			display:inline-block;
+			text-indent:-9999em;
+			vertical-align:top;
+		}
+	
+	
+	#user_login, .login-username {
+		display:none;
+	}
+	
+	#user_pass {
+		width:150px;
+		height:25px;
+	}
+	
+	.login-remember, .login-submit {
+		padding:0 0 0 27px;
+	}
