@@ -79,6 +79,7 @@ q:before, q:after {
 blockquote, q {
 	quotes: "" "";
 }
+
 a:focus {
 	outline: thin dotted;
 }
@@ -269,15 +270,15 @@ textarea {
 
 /* Links */
 a {
-	color: royalblue;
+	color: #0060C0;
 }
 a:visited {
-	color: purple;
+	color: #0060C0;
 }
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #0060C0;
 }
 
 /* Alignment */
@@ -969,3 +970,30 @@ p.form-submit {
 	.login-remember, .login-submit {
 		padding:0 0 0 27px;
 	}
+
+/* Gist styles */
+
+.gist .highlight {
+	background:none;
+      	-webkit-border-radius:0 0 0 0;
+	border-radius:0 0 0 0;
+	display:table;
+	padding:0;
+}
+
+.gist table {
+	margin:0;
+}
+
+.gist .line {
+	border:0 none;
+	margin:0;
+}
+
+/* Пагинация */
+
+.wp-pagenavi span,
+.wp-pagenavi a {
+	font-size:14px;
+	margin:0 5px 0 0;
+}
