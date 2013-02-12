@@ -29,7 +29,7 @@
         'label_username' => NULL,
         'label_password' => __( 'Password' ),
         'label_remember' => __( 'Remember Me' ),
-        'value_username' => 'lebowski',
+        'value_username' => '%YOURUSERNAMEHERE%',
         'value_remember' => false ); 
 	wp_login_form($args); ?>
 </div>
