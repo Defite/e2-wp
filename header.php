@@ -25,11 +25,14 @@
 <body <?php body_class(); ?>>
 <div id="login-popup">
 	<?php 
+	$user_info = get_userdata(1);
+        $user_login = $user_info->user_login;
+	
 	$args = array(
         'label_username' => NULL,
         'label_password' => __( 'Password' ),
         'label_remember' => __( 'Remember Me' ),
-        'value_username' => '%YOURUSERNAMEHERE%',
+        'value_username' => $user_login,
         'value_remember' => false ); 
 	wp_login_form($args); ?>
 </div>
