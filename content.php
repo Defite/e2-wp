@@ -9,14 +9,17 @@
 	<header class="entry-header">
 		<h1 class="entry-title">
 			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'e2' ) );
-				if ( $categories_list && e2_categorized_blog() ) :
+				if ( !has_post_format( 'link' )) {
+					/* translators: used between list items, there is a space after the comma */
+					$categories_list = get_the_category_list( __( ', ', 'e2' ) );
+					if ( $categories_list && e2_categorized_blog() ) : printf( __( '%1$s &rarr; ', 'e2' ), $categories_list ); 
+					endif; // End if categories 
 			?>
-				<?php printf( __( '%1$s &rarr; ', 'e2' ), $categories_list ); ?>
-			<?php endif; // End if categories ?>
-
-			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'e2' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+					<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'e2' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+        	<? 	} else { ?>
+          			<a href="<?php echo get_post_meta($post->ID, '_format_link_url', true) ?>"><?php the_title(); ?></a>  
+            <? } ?>    
+        </h1>
 		<?php edit_post_link( __( 'Edit', 'e2' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<span class="entry-meta">

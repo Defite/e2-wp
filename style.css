@@ -168,7 +168,8 @@ pre {
 	max-width: 100%;
 }
 code, kbd, tt, var {
-	font: 12px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font: .9em Monaco,Bitstream Vera Sans Mono,"Lucida Console",Terminal;
+	color: #000;
 }
 abbr, acronym {
 	border-bottom: 1px dotted #666;
@@ -631,6 +632,7 @@ ol.commentlist {
 	.comment-content {
 		display:inline-block;
 		vertical-align:top;
+		width:75%;
 	}
 	
 		.comment-content p {

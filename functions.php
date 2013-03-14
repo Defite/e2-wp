@@ -39,7 +39,7 @@ function e2_setup() {
 	/**
 	 * Custom Theme Options
 	 */
-	//require( get_template_directory() . '/inc/theme-options/theme-options.php' );
+	require( get_template_directory() . '/inc/theme-options/options.php' );
 
 	/**
 	 * Make theme available for translation
@@ -70,7 +70,8 @@ function e2_setup() {
 	 * Add support for the Aside Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 
-	//'image', 'link', 'audio', 'video' 
+	//'image', 'link', 'audio', 'video'
+	'link' 
 	) );
 }
 endif; // e2_setup
