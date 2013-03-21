@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Nik Makhov
 Author URI: http://defite.ru
 Description: Порт дефолтной темы для движка Эгея
-Version: 1.0
+Version: 1.1
 License: GNU General Public License
 License URI: license.txt
 Tags:
@@ -157,16 +157,15 @@ address {
 	margin: 0 0 1.5em;
 }
 pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 1.5rem;
+	background: #f6f6f6;
+	font: 12px/1.6 Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	padding: 1.6em;
 	overflow: auto;
 	max-width: 100%;
 }
+
 code, kbd, tt, var {
 	font: .9em Monaco,Bitstream Vera Sans Mono,"Lucida Console",Terminal;
 	color: #000;
