@@ -26,7 +26,7 @@
 <div id="login-popup">
 	<?php 
 	$user_info = get_userdata(1);
-        $user_login = $user_info->user_login;
+    $user_login = $user_info->user_login;
 	
 	$args = array(
         'label_username' => NULL,

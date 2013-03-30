@@ -1,3 +1,5 @@
+(function($) {
+
 //show window
 $(document).ready(function(){
 	$('#login').bind('click', function(){
@@ -16,3 +18,5 @@ $(document).mouseup(function (e)
         container.hide();
     }
 });
+
+})( jQuery );

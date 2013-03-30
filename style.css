@@ -308,7 +308,8 @@ a:active {
 /* Header */
 
 header#masthead {
-	width:1006px;
+	width:946px;
+	padding:0 20px;
 	margin:30px auto;
 }
 
@@ -399,7 +400,8 @@ h2.site-description {
 /* =Content
 ----------------------------------------------- */
 #page {
-	width:1006px;
+	width:946px;
+	padding:0 20px;
 	min-height:320px;
 	margin:20px auto;
 }
@@ -712,7 +714,8 @@ ul.children {
 /* Footer */
 
 footer#colophon {
-	width:1006px;
+	width:946px;
+	padding:0 20px;
 	margin:30px auto;
 }
 
@@ -739,7 +742,7 @@ footer {
 		}
 	
 	.copyrights, .engine-info {
-		width:39%;
+		width:38%;
 	}
 	
 	.engine-info, .engine-info a {
@@ -840,6 +843,7 @@ footer {
 
 .line {
 		margin: 0 0 1em;
+		min-width:1024px;
 		width: 100%;
 		border-bottom: 2px #CCC dashed;
 	}

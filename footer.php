@@ -19,13 +19,64 @@
 				<?php
 					if ( !is_user_logged_in() ) { ?>
 						<a id="login" class="login" href="#">Вход</a>
-				<?php } ?>		
-				&copy; 2012 &mdash; 2013 Джеффри &laquo;Чувак&raquo; Лебовски
+				<?php } 
+					$options = get_option('e2'); 
+					echo $options['1'];				
+				?> 
+				
+				<?php
+	    /*switch ($options['sample_select_options']) {
+
+                case 0 : ?>
+                DEFAULT
+                <?php break;
+
+                case 1 : ?>
+                ONE
+                <?php break;
+
+                case 2 : ?>
+                TWO
+                <?php break;
+
+                case 3 : ?>
+                THREE
+                <?php break;
+
+                case 4 : ?>
+                FOUR
+                <?php break;
+
+                case 5 : ?>
+                FIVE
+                <?php break;
+
+            } */
+?>
+				
 			</div>
 
 			<div class="footer-block engine-info">
 				Движок &mdash; <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'e2' ); ?>" rel="generator">WordPress</a><br />
-				<?php printf( __( 'Тема: %1$s', 'e2' ), 'e2 v.1' ); ?>
+				<?  
+				
+				if (function_exists('wp_get_theme')){
+			        $theme_data = wp_get_theme();
+			        $name = $theme_data->get('Name');
+			        $version = $theme_data->get('Version');
+			        $theme_info = $name.' v.'.$version;
+			        printf( __( 'Тема: %1$s', 'e2' ), $theme_info );
+			    }else{
+			        $theme_data = get_theme_data(trailingslashit(get_stylesheet_directory()) . 'style.css');
+			        $name = $theme_data['Name'];
+			        $theme_info = $name.' v.'.$version;
+			        printf( __( 'Тема: %1$s', 'e2' ), $theme_info );
+			    }
+				
+				?>
+				
+				
+				
 			</div>
 			<div class="footer-block footer-block_right">
 				<?php get_template_part( 'searchform'); ?>	
