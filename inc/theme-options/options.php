@@ -217,6 +217,114 @@ function setup_framework_options(){
 		// Set the class for this icon.
 		// This field is ignored unless $args['icon_type'] = 'iconfont'
 		'icon_class' => 'icon-large',
+        'title' => __('Общие настройки', Redux_TEXT_DOMAIN),
+		'desc' => __('<p class="description">На данный момент тут можно настроить только favicon :)</p>', Redux_TEXT_DOMAIN),
+        // Lets leave this as a blank section, no options just some intro text set above.
+        'fields' => array(
+        	array(
+                'id' => 'favicon', // The item ID must be unique
+                'type' => 'upload', // Built-in field types include:
+                // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
+                // select, multi_select, color, date, divide, info, upload
+                'title' => __('Favicon', Redux_TEXT_DOMAIN),
+                //'validate' => '', // Built-in validation includes: 
+                //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
+                //'msg' => 'custom error message', // Override the default validation error message for specific fields
+                //'std' => '', // This is the default value and is used to set an option on theme activation.
+                //'class' => '' // Set custom classes for elements if you want to do something a little different
+                //'rows' => '6' // Set the number of rows shown for the textarea. Default: 6
+			),
+			array(
+                'id' => 'link-color', // The item ID must be unique
+                'type' => 'color', // Built-in field types include:
+                // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
+                // select, multi_select, color, date, divide, info, upload
+                'title' => __('Цвет обычной ссылки', Redux_TEXT_DOMAIN),
+                //'validate' => '', // Built-in validation includes: 
+                //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
+                //'msg' => 'custom error message', // Override the default validation error message for specific fields
+                'std' => '#000', // This is the default value and is used to set an option on theme activation.
+                //'class' => '' // Set custom classes for elements if you want to do something a little different
+                //'rows' => '6' // Set the number of rows shown for the textarea. Default: 6
+			),
+			array(
+                'id' => 'link-hover-color', // The item ID must be unique
+                'type' => 'color', // Built-in field types include:
+                // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
+                // select, multi_select, color, date, divide, info, upload
+                'title' => __('Цвет :hover ссылки', Redux_TEXT_DOMAIN),
+                //'validate' => '', // Built-in validation includes: 
+                //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
+                //'msg' => 'custom error message', // Override the default validation error message for specific fields
+                'std' => '#000', // This is the default value and is used to set an option on theme activation.
+                //'class' => '' // Set custom classes for elements if you want to do something a little different
+                //'rows' => '6' // Set the number of rows shown for the textarea. Default: 6
+			)
+        )
+    );
+    
+    $sections[] = array(
+		// Redux uses the Font Awesome iconfont to supply its default icons.
+		// If $args['icon_type'] = 'iconfont', this should be the icon name minus 'icon-'.
+		// If $args['icon_type'] = 'image', this should be the path to the icon.
+		'icon' => 'paper-clip',
+		// Set the class for this icon.
+		// This field is ignored unless $args['icon_type'] = 'iconfont'
+		'icon_class' => 'icon-large',
+        'title' => __('SEO', Redux_TEXT_DOMAIN),
+		'desc' => __('<p class="description">Настройка полей для SEO</p>', Redux_TEXT_DOMAIN),
+        // Lets leave this as a blank section, no options just some intro text set above.
+        'fields' => array(
+        	array(
+                'id' => 'meta-keywords', // The item ID must be unique
+                'type' => 'text', // Built-in field types include:
+                // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
+                // select, multi_select, color, date, divide, info, upload
+                'title' => __('Meta keywords', Redux_TEXT_DOMAIN),
+                //'validate' => '', // Built-in validation includes: 
+                //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
+                //'msg' => 'custom error message', // Override the default validation error message for specific fields
+                //'std' => '', // This is the default value and is used to set an option on theme activation.
+                //'class' => '' // Set custom classes for elements if you want to do something a little different
+                //'rows' => '6' // Set the number of rows shown for the textarea. Default: 6
+			),
+			array(
+                'id' => 'meta-description', // The item ID must be unique
+                'type' => 'textarea', // Built-in field types include:
+                // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
+                // select, multi_select, color, date, divide, info, upload
+                'title' => __('Meta description', Redux_TEXT_DOMAIN),
+                //'validate' => '', // Built-in validation includes: 
+                //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
+                //'msg' => 'custom error message', // Override the default validation error message for specific fields
+                //'std' => '', // This is the default value and is used to set an option on theme activation.
+                //'class' => '' // Set custom classes for elements if you want to do something a little different
+                //'rows' => '6' // Set the number of rows shown for the textarea. Default: 6
+			),
+			array(
+                'id' => 'ya-metrika', // The item ID must be unique
+                'type' => 'textarea', // Built-in field types include:
+                // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
+                // select, multi_select, color, date, divide, info, upload
+                'title' => __('Яндекс.Метрика', Redux_TEXT_DOMAIN),
+                //'validate' => '', // Built-in validation includes: 
+                //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
+                //'msg' => 'custom error message', // Override the default validation error message for specific fields
+                //'std' => '', // This is the default value and is used to set an option on theme activation.
+                //'class' => '' // Set custom classes for elements if you want to do something a little different
+                //'rows' => '6' // Set the number of rows shown for the textarea. Default: 6
+			)
+        )
+    );
+    
+    $sections[] = array(
+		// Redux uses the Font Awesome iconfont to supply its default icons.
+		// If $args['icon_type'] = 'iconfont', this should be the icon name minus 'icon-'.
+		// If $args['icon_type'] = 'image', this should be the path to the icon.
+		'icon' => 'paper-clip',
+		// Set the class for this icon.
+		// This field is ignored unless $args['icon_type'] = 'iconfont'
+		'icon_class' => 'icon-large',
         'title' => __('Подвал', Redux_TEXT_DOMAIN),
 		'desc' => __('<p class="description">Настройки подвала</p>', Redux_TEXT_DOMAIN),
         // Lets leave this as a blank section, no options just some intro text set above.

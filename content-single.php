@@ -7,7 +7,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php echo get_post_meta($post->ID, '_format_link_url', true) ?>"><?php the_title(); ?></a></h1>
+		<h1 class="entry-title"><?php the_title(); ?></h1>
                 <?php edit_post_link( __( 'Edit', 'e2' ), '<span class="edit-link">', '</span>' ); ?>
 		<span class="entry-meta">
 			<?php e2_posted_on(); ?>

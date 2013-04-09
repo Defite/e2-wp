@@ -91,7 +91,6 @@ a img {
 	border: 0;
 }
 
-
 /* =Global
 ----------------------------------------------- */
 
@@ -110,8 +109,30 @@ textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
+	font-weight:bold;
 	margin:0 0 20px 0;
 }
+
+h1 {
+    font-size: 28px; 
+}
+h2 {
+    font-size: 23px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 14px;
+}
+
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -271,14 +292,24 @@ textarea {
 /* Links */
 a {
 	color: #0060C0;
+	text-decoration:none;
 }
-a:visited {
-	color: #0060C0;
+
+a:hover {
+	text-decoration:none;
 }
+
 a:hover,
 a:focus,
 a:active {
 	color: #0060C0;
+}
+
+/* Link styling for different parts of site */
+
+.hentry a,
+footer a {
+	text-decoration:underline;
 }
 
 /* Alignment */
@@ -313,10 +344,10 @@ header#masthead {
 	margin:30px auto;
 }
 
-h1.site-title > a {
+h1.site-title > a,
+h1.site-title {
 	font-size: 24px;
 	font-weight: bold;
-	margin: 0;
 	color: black;
 	text-decoration:none;
 }
@@ -416,6 +447,11 @@ h2.site-description {
 	color:#000;
 }
 
+.entry-title a {
+	border-bottom:1px solid #BFBFBF;
+	text-decoration:none;
+}
+
 .edit-link {
 	display:inline-block;
 	vertical-align:top;
@@ -429,7 +465,7 @@ h2.site-description {
 }
 .entry-meta {
 	clear: both;
-	font-size:10px;
+	font-size:12px;
 	font-style:italic;
 }
 
@@ -480,9 +516,14 @@ h2.site-description {
     text-decoration:none;
 }
 
+#content .tags-links a:hover {
+	color:#000;	
+}
+
 .tags-links a {
     font-style:normal;
-    font-size:13px;   
+    font-size:13px;
+    border-bottom:1px solid #BFBFBF;   
 }
 
 
@@ -588,6 +629,10 @@ object {
 
 /* =Comments
 ----------------------------------------------- */
+.comments-link {
+	font-size:12px;
+}
+
 .comments-title {
 	font-size:18px;
 }
@@ -646,6 +691,7 @@ ol.commentlist {
 
 #reply-title {
 	font-weight:bold;
+	font-size:16px;
 }
 
 #respond p {
@@ -853,7 +899,7 @@ footer {
 p.form-submit {
     background: none repeat scroll 0 0 #F0F0C0;
     border-radius: 12px 12px 12px 12px;
-    margin: 0.75em 0 1.5em 12%;
+    margin: 0.75em 0 1.5em 13.5%;
     padding: 0.75em 1em 1.5em 10%;
 }
 
@@ -975,25 +1021,6 @@ p.form-submit {
 	.login-remember, .login-submit {
 		padding:0 0 0 27px;
 	}
-
-/* Gist styles */
-
-.gist .highlight {
-	background:none;
-      	-webkit-border-radius:0 0 0 0;
-	border-radius:0 0 0 0;
-	display:table;
-	padding:0;
-}
-
-.gist table {
-	margin:0;
-}
-
-.gist .line {
-	border:0 none;
-	margin:0;
-}
 
 /* Пагинация */
 

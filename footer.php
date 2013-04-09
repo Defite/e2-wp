@@ -87,5 +87,6 @@
 
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/login.js" type="text/javascript"></script>
+<? echo $options['ya-metrika']; ?>
 </body>
 </html>
