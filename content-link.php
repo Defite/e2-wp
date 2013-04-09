@@ -1,6 +1,9 @@
 <?php
 /**
- * @package e2
+ * The template for displaying posts in the Link post format.
+ *
+ * @package WordPress
+ * @subpackage e2
  * @since e2 1.0
  */
 ?>
@@ -8,11 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title">
-			<?php	$categories_list = get_the_category_list( __( ', ', 'e2' ) );
-					if ( $categories_list && e2_categorized_blog() ) : printf( __( '%1$s &rarr; ', 'e2' ), $categories_list ); 
-					endif; // End if categories 
-			?>
-			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'e2' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>   
+			<a href="<?php echo esc_url( e2_get_link_url() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>   
         </h1>
 		<?php edit_post_link( __( 'Edit', 'e2' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php if ( 'post' == get_post_type() ) : ?>
@@ -28,7 +27,7 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content( __( 'Далее <span class="meta-nav">&rarr;</span>', 'e2' ) ); ?>
+		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'e2' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>

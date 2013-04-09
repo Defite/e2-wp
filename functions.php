@@ -67,12 +67,15 @@ function e2_setup() {
 	) );
 
 	/**
-	 * Add support for the Aside Post Formats
+	 * Add support for the Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', 
-	//'image', 'link', 'audio', 'video'
-	'link' 
+	add_theme_support( 'structured-post-formats', array(
+		'link', 'video'
 	) );
+	add_theme_support( 'post-formats', array(
+		'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status'
+	) );
+
 }
 endif; // e2_setup
 add_action( 'after_setup_theme', 'e2_setup' );
@@ -111,6 +114,23 @@ function e2_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'e2_scripts' );
+
+/**
+ * Returns the URL from the post.
+ *
+ * @uses get_the_link() to get the URL in the post meta (if it exists) or
+ * the first link found in the post content.
+ *
+ * Falls back to the post permalink if no URL is found in the post.
+ *
+ * @since e2 1.0
+ * @return string URL
+ */
+function e2_get_link_url() {
+	$has_url = get_the_post_format_url();
+
+	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
+}
 
 /**
  * Implement the Custom Header feature
