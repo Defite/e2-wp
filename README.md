@@ -5,6 +5,10 @@ e2 WordPress Theme
 
 Inspired by http://blogengine.ru/ 'whatsoever' theme, made with http://underscores.me/ 
 
+v.1.2
+--
+Added new link post format functionality compatible with WordPress 3.6. Soon, others post formats will be added.
+
 v.1.1
 --
 Theme options page added. Proper styles for code added.
