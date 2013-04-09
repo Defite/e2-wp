@@ -23,41 +23,12 @@
 					$options = get_option('e2'); 
 					echo $options['1'];				
 				?> 
-				
-				<?php
-	    /*switch ($options['sample_select_options']) {
-
-                case 0 : ?>
-                DEFAULT
-                <?php break;
-
-                case 1 : ?>
-                ONE
-                <?php break;
-
-                case 2 : ?>
-                TWO
-                <?php break;
-
-                case 3 : ?>
-                THREE
-                <?php break;
-
-                case 4 : ?>
-                FOUR
-                <?php break;
-
-                case 5 : ?>
-                FIVE
-                <?php break;
-
-            } */
-?>
-				
+								
 			</div>
 
 			<div class="footer-block engine-info">
 				Движок &mdash; <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'e2' ); ?>" rel="generator">WordPress</a><br />
+				<a href="https://github.com/Defite/e2-wp" target="_blank">
 				<?  
 				
 				if (function_exists('wp_get_theme')){
@@ -74,7 +45,7 @@
 			    }
 				
 				?>
-				
+				</a>
 				
 				
 			</div>
