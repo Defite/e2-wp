@@ -16,7 +16,6 @@ $options = get_option('e2');
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <meta name="keywords" content="<? echo $options['meta-keywords']; ?>">
-<meta name="description" content="<? echo $options['meta-description']; ?>">
 <meta name='yandex-verification' content='74ec3bade8f3fe65' />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -62,7 +61,7 @@ a:hover {
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
-			<? if (is_home()) { ?>
+			<? if (is_home() && !is_paged()) { ?>
 				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<? } else { ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
