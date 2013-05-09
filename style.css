@@ -487,7 +487,8 @@ h2.site-description {
 	display: inline;
 }
 .entry-content,
-.entry-summary {
+.entry-summary,
+.entry-media {
 	margin: 1.5em 0 0;
 }
 
