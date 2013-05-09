@@ -45,8 +45,8 @@
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Оставить комментарий', 'e2' ), __( '1 комментарий', 'e2' ), __( 'Уже % отписалось', 'e2' ) ); ?></span>
+		<?php if ( comments_open() && ! is_single() ) : ?>
+			<span class="comments-link"><?php comments_popup_link( __( 'Оставить комментарий', 'e2' ), __( '1 комментарий', 'e2' ), __( 'Уже % отписалось', 'e2' ) ); ?></span>
 		<?php endif; ?>
 
 		
