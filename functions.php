@@ -73,7 +73,7 @@ function e2_setup() {
 		'link', 'video'
 	) );
 	add_theme_support( 'post-formats', array(
-		'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status'
+		'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status', 'video'
 	) );
 
 }
