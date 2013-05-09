@@ -7,7 +7,8 @@ Inspired by http://blogengine.ru/ 'whatsoever' theme, made with http://underscor
 
 v.1.2
 --
-Added new link post format functionality compatible with WordPress 3.6. Soon, others post formats will be added.
+Added new link post format functionality compatible with WordPress 3.6.
+Added video post format support (9.5.2013)
 
 v.1.1
 --
