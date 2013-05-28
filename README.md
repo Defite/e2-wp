@@ -9,6 +9,7 @@ v.1.2
 --
 Added new link post format functionality compatible with WordPress 3.6.
 Added video post format support (9.5.2013)
+Added image post format support (29.5.2013)
 
 v.1.1
 --
