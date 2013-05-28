@@ -1,6 +1,6 @@
 <?php
 /**
- * Video post template
+ * Image post template
  * @package e2
  * @since e2 1.0
  */
@@ -26,11 +26,11 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-media">
-		<?php the_post_format_video(); ?>
+		<?php the_post_format_image(); ?>
 	</div><!-- .entry-media -->
-
-	<div class="entry-content">
-		<?php the_content( __( 'Далее <span class="meta-nav">&rarr;</span>', 'e2' ) ); ?>
+    
+    <div class="entry-content">
+		<?php the_remaining_content( __( 'Далее <span class="meta-nav">&rarr;</span>', 'e2' ) ); ?>
         
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'e2' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
@@ -54,4 +54,4 @@
 		
 	</footer><!-- .entry-meta -->
 
-</article><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post -->
