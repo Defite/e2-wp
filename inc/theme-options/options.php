@@ -276,32 +276,6 @@ function setup_framework_options(){
         // Lets leave this as a blank section, no options just some intro text set above.
         'fields' => array(
         	array(
-                'id' => 'meta-keywords', // The item ID must be unique
-                'type' => 'text', // Built-in field types include:
-                // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
-                // select, multi_select, color, date, divide, info, upload
-                'title' => __('Meta keywords', Redux_TEXT_DOMAIN),
-                //'validate' => '', // Built-in validation includes: 
-                //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
-                //'msg' => 'custom error message', // Override the default validation error message for specific fields
-                //'std' => '', // This is the default value and is used to set an option on theme activation.
-                //'class' => '' // Set custom classes for elements if you want to do something a little different
-                //'rows' => '6' // Set the number of rows shown for the textarea. Default: 6
-			),
-			array(
-                'id' => 'meta-description', // The item ID must be unique
-                'type' => 'textarea', // Built-in field types include:
-                // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
-                // select, multi_select, color, date, divide, info, upload
-                'title' => __('Meta description', Redux_TEXT_DOMAIN),
-                //'validate' => '', // Built-in validation includes: 
-                //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
-                //'msg' => 'custom error message', // Override the default validation error message for specific fields
-                //'std' => '', // This is the default value and is used to set an option on theme activation.
-                //'class' => '' // Set custom classes for elements if you want to do something a little different
-                //'rows' => '6' // Set the number of rows shown for the textarea. Default: 6
-			),
-			array(
                 'id' => 'ya-metrika', // The item ID must be unique
                 'type' => 'textarea', // Built-in field types include:
                 // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,

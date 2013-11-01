@@ -15,7 +15,6 @@ $options = get_option('e2');
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
-<meta name="keywords" content="<? echo $options['meta-keywords']; ?>">
 <meta name='yandex-verification' content='74ec3bade8f3fe65' />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
