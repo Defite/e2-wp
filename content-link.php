@@ -10,8 +10,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php $link = get_post_meta($post->ID, '_format_link_url', true); ?>		
 		<h1 class="entry-title">
-			<a href="<?php echo esc_url( e2_get_link_url() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>   
+			<a href="<?php echo $link; ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
         </h1>
 		<?php edit_post_link( __( 'Edit', 'e2' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php if ( 'post' == get_post_type() ) : ?>

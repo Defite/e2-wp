@@ -25,10 +25,6 @@
 		</span><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<div class="entry-media">
-		<?php the_post_format_video(); ?>
-	</div><!-- .entry-media -->
-
 	<div class="entry-content">
 		<?php the_content( __( 'Далее <span class="meta-nav">&rarr;</span>', 'e2' ) ); ?>
         
