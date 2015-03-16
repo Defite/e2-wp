@@ -22,9 +22,15 @@ get_header(); ?>
 
 					<?php get_template_part( 'content', 'search' ); ?>
 
-				<?php endwhile; ?>
-
-				<?php wp_pagenavi(); ?>
+				<?php endwhile; 
+				
+				if(function_exists('wp_pagenavi')) { 
+					wp_pagenavi(); 
+			  	} else {
+				  	e2_content_nav( 'nav-below' );
+			  	}
+				
+				?>
 
 			<?php else : ?>
 
