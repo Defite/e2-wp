@@ -78,9 +78,15 @@ get_header(); ?>
 						get_template_part( 'content', get_post_format() );
 					?>
 
-				<?php endwhile; ?>
-
-				<?php wp_pagenavi(); ?>
+				<?php endwhile; 
+				
+				if(function_exists('wp_pagenavi')) { 
+					wp_pagenavi(); 
+			  	} else {
+				  	e2_content_nav( 'nav-below' );
+			  	}
+				
+				?>
 			<?php else : ?>
 
 				<?php get_template_part( 'no-results', 'archive' ); ?>
