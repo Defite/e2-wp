@@ -28,43 +28,43 @@ $options = get_option('e2');
 <?php wp_head(); ?>
 <style type="text/css">
 a {
-	color:<? echo $options['link-color']; ?>;
+	color:<?= $options['link-color']; ?>;
 }
 
 a:hover {
-	color:<? echo $options['link-hover-color']; ?>;
+	color:<?= $options['link-hover-color']; ?>;
 }
 
 .entry-title a:hover {
-	color: <? echo $options['link-color']; ?>;
-	border-color: <? echo $options['link-color']; ?>;
+	color: <?= $options['link-color']; ?>;
+	border-color: <?= $options['link-color']; ?>;
 }
 </style>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="login-popup">
-	<?php 
+	<?php
 	$user_info = get_userdata(1);
     $user_login = $user_info->user_login;
-	
+
 	$args = array(
         'label_username' => NULL,
         'label_password' => __( 'Password' ),
         'label_remember' => __( 'Remember Me' ),
         'value_username' => $user_login,
-        'value_remember' => false ); 
+        'value_remember' => false );
 	wp_login_form($args); ?>
 </div>
 
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
-			<? if (is_home() && !is_paged()) { ?>
+			<?php if (is_home() && !is_paged()) { ?>
 				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-			<? } else { ?>
+			<?php } else { ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<? } ?>
+			<?php } ?>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
 	</header><!-- #masthead .site-header -->

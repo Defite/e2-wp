@@ -43,13 +43,13 @@ function add_another_section($sections){
 
 
 /*
- * 
+ *
  * Custom function for filtering the args array given by a theme, good for child themes to override or add to the args array.
  *
  */
 function change_framework_args($args){
     //$args['dev_mode'] = false;
-    
+
     return $args;
 }
 //add_filter('redux-opts-args-twenty_eleven', 'change_framework_args');
@@ -106,12 +106,12 @@ function setup_framework_options(){
     // Setup custom links in the footer for share icons
     /*$args['share_icons']['twitter'] = array(
         'link' => 'http://twitter.com/ghost1227',
-        'title' => 'Follow me on Twitter', 
+        'title' => 'Follow me on Twitter',
         'img' => Redux_OPTIONS_URL . 'img/social/Twitter.png'
     );
     $args['share_icons']['linked_in'] = array(
         'link' => 'http://www.linkedin.com/profile/view?id=52559281',
-        'title' => 'Find me on LinkedIn', 
+        'title' => 'Find me on LinkedIn',
         'img' => Redux_OPTIONS_URL . 'img/social/LinkedIn.png'
     );*/
 
@@ -177,7 +177,7 @@ function setup_framework_options(){
     // Disable the panel sections showing as submenu items.
     // Default: true
     //$args['allow_sub_menu'] = false;
-        
+
     // Set ANY custom page help tabs, displayed using the new help tab API. Tabs are shown in order of definition.
     /*$args['help_tabs'][] = array(
         'id' => 'redux-opts-1',
@@ -190,25 +190,25 @@ function setup_framework_options(){
         'content' => __('<p>This is the tab content, HTML is allowed.</p>', Redux_TEXT_DOMAIN)
     );
 
-    // Set the help sidebar for the options page.                                        
+    // Set the help sidebar for the options page.
     $args['help_sidebar'] = __('<p>This is the sidebar content, HTML is allowed.</p>', Redux_TEXT_DOMAIN);
     */
     $sections = array();
 
-    $sections[] = array(
-		// Redux uses the Font Awesome iconfont to supply its default icons.
-		// If $args['icon_type'] = 'iconfont', this should be the icon name minus 'icon-'.
-		// If $args['icon_type'] = 'image', this should be the path to the icon.
-		'icon' => 'paper-clip',
-		// Set the class for this icon.
-		// This field is ignored unless $args['icon_type'] = 'iconfont'
-		'icon_class' => 'icon-large',
-        'title' => __('Getting Started', Redux_TEXT_DOMAIN),
-		'desc' => __('<p class="description">This is the description field for this section. HTML is allowed</p>', Redux_TEXT_DOMAIN),
-        // Lets leave this as a blank section, no options just some intro text set above.
-        //'fields' => array()
-    );
-    
+    // $sections[] = array(
+		// // Redux uses the Font Awesome iconfont to supply its default icons.
+		// // If $args['icon_type'] = 'iconfont', this should be the icon name minus 'icon-'.
+		// // If $args['icon_type'] = 'image', this should be the path to the icon.
+		// 'icon' => 'paper-clip',
+		// // Set the class for this icon.
+		// // This field is ignored unless $args['icon_type'] = 'iconfont'
+		// 'icon_class' => 'icon-large',
+    //     'title' => __('Getting Started', Redux_TEXT_DOMAIN),
+		// 'desc' => __('<p class="description">This is the description field for this section. HTML is allowed</p>', Redux_TEXT_DOMAIN),
+    //     // Lets leave this as a blank section, no options just some intro text set above.
+    //     //'fields' => array()
+    // );
+
     $sections[] = array(
 		// Redux uses the Font Awesome iconfont to supply its default icons.
 		// If $args['icon_type'] = 'iconfont', this should be the icon name minus 'icon-'.
@@ -227,7 +227,7 @@ function setup_framework_options(){
                 // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
                 // select, multi_select, color, date, divide, info, upload
                 'title' => __('Favicon', Redux_TEXT_DOMAIN),
-                //'validate' => '', // Built-in validation includes: 
+                //'validate' => '', // Built-in validation includes:
                 //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
                 //'msg' => 'custom error message', // Override the default validation error message for specific fields
                 //'std' => '', // This is the default value and is used to set an option on theme activation.
@@ -240,7 +240,7 @@ function setup_framework_options(){
                 // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
                 // select, multi_select, color, date, divide, info, upload
                 'title' => __('Цвет обычной ссылки', Redux_TEXT_DOMAIN),
-                //'validate' => '', // Built-in validation includes: 
+                //'validate' => '', // Built-in validation includes:
                 //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
                 //'msg' => 'custom error message', // Override the default validation error message for specific fields
                 'std' => '#000', // This is the default value and is used to set an option on theme activation.
@@ -253,7 +253,7 @@ function setup_framework_options(){
                 // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
                 // select, multi_select, color, date, divide, info, upload
                 'title' => __('Цвет :hover ссылки', Redux_TEXT_DOMAIN),
-                //'validate' => '', // Built-in validation includes: 
+                //'validate' => '', // Built-in validation includes:
                 //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
                 //'msg' => 'custom error message', // Override the default validation error message for specific fields
                 'std' => '#000', // This is the default value and is used to set an option on theme activation.
@@ -262,7 +262,7 @@ function setup_framework_options(){
 			)
         )
     );
-    
+
     $sections[] = array(
 		// Redux uses the Font Awesome iconfont to supply its default icons.
 		// If $args['icon_type'] = 'iconfont', this should be the icon name minus 'icon-'.
@@ -281,7 +281,7 @@ function setup_framework_options(){
                 // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
                 // select, multi_select, color, date, divide, info, upload
                 'title' => __('Яндекс.Метрика', Redux_TEXT_DOMAIN),
-                //'validate' => '', // Built-in validation includes: 
+                //'validate' => '', // Built-in validation includes:
                 //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
                 //'msg' => 'custom error message', // Override the default validation error message for specific fields
                 //'std' => '', // This is the default value and is used to set an option on theme activation.
@@ -290,7 +290,7 @@ function setup_framework_options(){
 			)
         )
     );
-    
+
     $sections[] = array(
 		// Redux uses the Font Awesome iconfont to supply its default icons.
 		// If $args['icon_type'] = 'iconfont', this should be the icon name minus 'icon-'.
@@ -309,7 +309,7 @@ function setup_framework_options(){
                 // text, textarea, editor, checkbox, multi_checkbox, radio, radio_img, button_set,
                 // select, multi_select, color, date, divide, info, upload
                 'title' => __('Текст копирайта', Redux_TEXT_DOMAIN),
-                //'validate' => '', // Built-in validation includes: 
+                //'validate' => '', // Built-in validation includes:
                 //  email, html, html_custom, no_html, js, numeric, comma_numeric, url, str_replace, preg_replace
                 //'msg' => 'custom error message', // Override the default validation error message for specific fields
                 //'std' => '', // This is the default value and is used to set an option on theme activation.
@@ -317,8 +317,8 @@ function setup_framework_options(){
                 //'rows' => '6' // Set the number of rows shown for the textarea. Default: 6
 			)
         )
-    );    
-                
+    );
+
     $tabs = array();
 
     if (function_exists('wp_get_theme')){
@@ -338,7 +338,7 @@ function setup_framework_options(){
         $version = $theme_data['Version'];
         $tags = $theme_data['Tags'];
      }
-    
+
     $item_info = '<div class="redux-opts-section-desc">';
     $item_info .= '<p class="redux-opts-item-data description item-uri">' . __('<strong>Theme URL:</strong> ', Redux_TEXT_DOMAIN) . '<a href="' . $item_uri . '" target="_blank">' . $item_uri . '</a></p>';
     $item_info .= '<p class="redux-opts-item-data description item-author">' . __('<strong>Author:</strong> ', Redux_TEXT_DOMAIN) . ($author_uri ? '<a href="' . $author_uri . '" target="_blank">' . $author . '</a>' : $author) . '</p>';
@@ -353,7 +353,7 @@ function setup_framework_options(){
         'title' => __('Theme Information', Redux_TEXT_DOMAIN),
         'content' => $item_info
     );
-    
+
     if(file_exists(trailingslashit(dirname(__FILE__)) . 'README.html')) {
         $tabs['docs'] = array(
 			'icon' => 'book',
@@ -370,7 +370,7 @@ function setup_framework_options(){
 add_action('init', 'setup_framework_options', 0);
 
 /*
- * 
+ *
  * Custom function for the callback referenced above
  *
  */
@@ -380,7 +380,7 @@ function my_custom_field($field, $value) {
 }
 
 /*
- * 
+ *
  * Custom function for the callback validation referenced above
  *
  */
@@ -389,7 +389,7 @@ function validate_callback_function($field, $value, $existing_value) {
     $value =  'just testing';
     /*
     do your validation
-    
+
     if(something) {
         $value = $value;
     } elseif(somthing else) {
@@ -398,7 +398,7 @@ function validate_callback_function($field, $value, $existing_value) {
         $field['msg'] = 'your custom error message';
     }
     */
-    
+
     $return['value'] = $value;
     if($error == true) {
         $return['error'] = $field;
